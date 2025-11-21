@@ -48,6 +48,6 @@ cd ~
 
 # How it works
 
-- It creates a user with the same UID as you have, so when inside the container, you have access to nRF workspace;
+- It creates a user with the same UID as you have, so when inside the container, you have rw-access to nRF workspace;
 - It mounts a directory into the docker container, so it's shared b/w the host, and the container;
 - It runs contained shell as a user called `nrf52` with the same UID as the user on the host;
