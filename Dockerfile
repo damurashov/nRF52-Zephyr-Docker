@@ -18,4 +18,6 @@ RUN adduser --system --uid $DOCKER_UID --group --shell /bin/bash nrf52 && \
 	chown -R nrf52 /home/nrf52/zephyrproject
 COPY nrf-install.sh /home/nrf52/
 RUN chmod a+x /home/nrf52/nrf-install.sh
+COPY nrfutil /home/nrf52
+RUN chmod a+x /home/nrf52/nrfutil
 USER nrf52
