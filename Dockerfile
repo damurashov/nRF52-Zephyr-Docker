@@ -21,3 +21,4 @@ RUN chmod a+x /home/nrf52/nrf-install.sh
 COPY nrfutil /home/nrf52
 RUN chmod a+x /home/nrf52/nrfutil
 USER nrf52
+COPY requirements /home/nrf52/requirements
