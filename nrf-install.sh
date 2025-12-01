@@ -17,10 +17,10 @@ git checkout v4.3.0
 
 echo updating...
 cd ~/zephyrproject
-west update 
+west update
 
 echo exporting...
-west zephyr-export 
+west zephyr-export
 
 echo installing pip dependencies...
 # instead of `west packages pip --install` -- it's broken (2025-11)
@@ -31,5 +31,6 @@ pip install -r /home/nrf52/requirements/requirements.txt
 # https://github.com/zephyrproject-rtos/sdk-ng/releases/tag/v0.17.4 which results in a couple of GB.
 # Download toolchains for NRF (arm zephyr), "host tools", and be done with it;
 
-cd ~/zephyrproject/zephyr
-west sdk install
+cd ~/zephyrproject
+mkdir -p toolchains
+west sdk install --toolchains arm-zephyr-eabi --install-dir toolchains

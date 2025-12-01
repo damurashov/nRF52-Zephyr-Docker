@@ -41,9 +41,9 @@ cd ~
 
 # Use
 
-- now you have `zephyrproject/` directory in `~/yourworkspace`. 
+- now you have `zephyrproject/` directory in `~/yourworkspace`.
 - `~/yourworkspace/zephyrproject` is mapped into the container's `/home/nrf52/zephyrproject`;
-- Just knock yourself with your regular development workflow. 
+- Just knock yourself with your regular development workflow.
 - Once you need to build the project, just call `./launch.sh`, navigate to `~/nrf52/zephyrproject`, and do whatever you want there;
 
 # How it works
@@ -51,3 +51,5 @@ cd ~
 - It creates a user with the same UID as you have, so when inside the container, you have rw-access to nRF workspace;
 - It mounts a directory into the docker container, so it's shared b/w the host, and the container;
 - It runs contained shell as a user called `nrf52` with the same UID as the user on the host;
+
+Please note that the workspace IS NOT a part of the container. You'll have to do it manually
