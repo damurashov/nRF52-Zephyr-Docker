@@ -39,6 +39,14 @@ cd ~
 ./nrf-install.sh
 ```
 
+# How do I test it
+
+```bash
+(host)> launch.sh
+(container)> cd ~/zephyrproject/zephyr
+(container)> west build -b nrf52840dongle/nrf52840/bare samples/basic/blinky
+```
+
 # Use
 
 - now you have `zephyrproject/` directory in `~/yourworkspace`.
