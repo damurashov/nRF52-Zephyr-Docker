@@ -32,7 +32,8 @@ git clone <THIS REPO>
 ./launch.sh
 ```
 
-Congrats! You're inside. When first time there, launch;
+- Congrats! You're inside. When first time there, launch;
+- WARNING: this will create the workspace in the same `$PWD` you run it. If you're not ok with it, make a symbolic link to whenever you want it to be;
 
 ```
 cd ~
@@ -60,4 +61,4 @@ cd ~
 - It mounts a directory into the docker container, so it's shared b/w the host, and the container;
 - It runs contained shell as a user called `nrf52` with the same UID as the user on the host;
 
-Please note that the workspace IS NOT a part of the container. You'll have to do it manually
+Please note that the workspace IS NOT a part of the container. You'll have to run `nrf-install.sh` from within the container manually to install it;
